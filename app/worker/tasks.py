@@ -137,4 +137,4 @@ def evaluate_test_after_close(self, test_id: str):
         # log to database
         raise self.retry(exc=e, countdown=60, max_retries=3)
 
-
+celery_app.send_task(task_name, args)
